@@ -27,8 +27,8 @@ public class Doctor
 	@Column(name="DOCTORNAME")
 	private String doctorName;
 	
-	@Column(name="DOCTORNUMBER")
-	private Integer doctorNumber;
+	@Column(name="DOCTORNUMBER", columnDefinition="BIGINT(20)")
+	private Long doctorNumber;
 	
 	@Column(name="DOCTOREXPERIENCE")
 	private Integer doctorExperience;
@@ -53,12 +53,12 @@ public class Doctor
 		this.doctorName = doctorName;
 	}
 
-	public Integer getDoctorNumber()
+	public Long getDoctorNumber()
 	{
 		return doctorNumber;
 	}
 
-	public void setDoctorNumber(Integer doctorNumber) 
+	public void setDoctorNumber(Long doctorNumber) 
 	{
 		this.doctorNumber = doctorNumber;
 	}
